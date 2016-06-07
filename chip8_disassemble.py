@@ -19,6 +19,7 @@ def main() :
 def generateAssembly(filePath):
 	assemblyInstructions = []
 	with open(filePath, "rb") as f:
+		programCounter = 0x200
 		opcode = f.read(2)
 		while opcode:
 			hexOpcode = binascii.hexlify(opcode)
@@ -28,7 +29,8 @@ def generateAssembly(filePath):
 			for arg in opcodeArgsList:
 				opcodeArgs += arg + ", "
 			opcodeArgs = opcodeArgs[ : -2]
-			assemblyInstructions.append(hexOpcode + "\t\t" + opcodeInstruction + "\t" + opcodeArgs)
+			assemblyInstructions.append(hex(programCounter) + ":\t" + hexOpcode + "\t\t" + opcodeInstruction + "\t" + opcodeArgs)
+			programCounter += 2;
 			opcode = f.read(2)
 	return assemblyInstructions
 
