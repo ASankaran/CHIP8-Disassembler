@@ -28,7 +28,7 @@ def generateAssembly(filePath):
 			for arg in opcodeArgsList:
 				opcodeArgs += arg + ", "
 			opcodeArgs = opcodeArgs[ : -2]
-			assemblyInstructions.append(hexOpcode + " : " + opcodeInstruction + " " + opcodeArgs)
+			assemblyInstructions.append(hexOpcode + "\t\t" + opcodeInstruction + "\t" + opcodeArgs)
 			opcode = f.read(2)
 	return assemblyInstructions
 
