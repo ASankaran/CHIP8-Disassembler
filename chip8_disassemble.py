@@ -11,6 +11,13 @@ def main() :
 		exit()
 
 	filePath = sys.argv[1]
+	assemblyInstructions = generateAssembly(filePath)
+	for instruction in assemblyInstructions:
+		print instruction
+	
+
+def generateAssembly(filePath):
+	assemblyInstructions = []
 	with open(filePath, "rb") as f:
 		opcode = f.read(2)
 		while opcode:
@@ -21,9 +28,9 @@ def main() :
 			for arg in opcodeArgsList:
 				opcodeArgs += arg + ", "
 			opcodeArgs = opcodeArgs[ : -2]
-			print hexOpcode + " : " + opcodeInstruction + " " + opcodeArgs
+			assemblyInstructions.append(hexOpcode + " : " + opcodeInstruction + " " + opcodeArgs)
 			opcode = f.read(2)
-
+	return assemblyInstructions
 
 def maskOpcode(opcode):
 	if (opcode & 0xF000) in [0x0000, 0xE000, 0xF000]:
