@@ -22,92 +22,92 @@ def get0x2000Args(opcode):
 
 def get0x3000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append(str(hex(opcode & 0x00FF)))
 	return args
 
 def get0x4000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append(str(hex(opcode & 0x00FF)))
 	return args
 
 def get0x5000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x6000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append(str(hex(opcode & 0x00FF)))
 	return args
 
 def get0x7000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append(str(hex(opcode & 0x00FF)))
 	return args
 
 def get0x8000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8001Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8002Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8003Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8004Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8005Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8006Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x8007Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x800EArgs(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0x9000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	return args
 
 def get0xA000Args(opcode):
@@ -124,78 +124,78 @@ def get0xB000Args(opcode):
 
 def get0xC000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append(str(hex(opcode & 0x00FF)))
 	return args
 
 def get0xD000Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
-	args.append(str(hex((opcode & 0x00F0) >> 4)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
+	args.append("V" + hex((opcode & 0x00F0) >> 4)[2 : ].upper())
 	args.append(str(hex(opcode & 0x000F)))
 	return args
 
 def get0xE09EArgs(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xE0A1Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF007Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append("DT")
 	return args
 
 def get0xF00AArgs(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append("K")
 	return args
 
 def get0xF015Args(opcode):
 	args = []
 	args.append("DT")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF018Args(opcode):
 	args = []
 	args.append("ST")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF01EArgs(opcode):
 	args = []
 	args.append("I")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF029Args(opcode):
 	args = []
 	args.append("F")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF033Args(opcode):
 	args = []
 	args.append("B")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF055Args(opcode):
 	args = []
 	args.append("[I]")
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	return args
 
 def get0xF065Args(opcode):
 	args = []
-	args.append(str(hex((opcode & 0x0F00) >> 8)))
+	args.append("V" + hex((opcode & 0x0F00) >> 8)[2 : ].upper())
 	args.append("[I]")
 	return args
 

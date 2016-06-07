@@ -20,7 +20,7 @@ def main() :
 			opcodeArgs = ""
 			for arg in opcodeArgsList:
 				opcodeArgs += arg + ", "
-			opcodeArgs = opcodeArgs[ : -1]
+			opcodeArgs = opcodeArgs[ : -2]
 			print hexOpcode + " : " + opcodeInstruction + " " + opcodeArgs
 			opcode = f.read(2)
 
