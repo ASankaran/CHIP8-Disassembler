@@ -2,6 +2,8 @@ import sys
 import binascii
 
 from opcode_table import opcodeTable
+from opcode_args_table import opcodeArgsTable
+
 
 def main() :
 	if len(sys.argv) < 2:
@@ -14,7 +16,12 @@ def main() :
 		while opcode:
 			hexOpcode = binascii.hexlify(opcode)
 			opcodeInstruction = lookupOpcode(int(hexOpcode, 16))
-			print hexOpcode + " : " + opcodeInstruction
+			opcodeArgsList = findOpcodeArgs(int(hexOpcode, 16))
+			opcodeArgs = ""
+			for arg in opcodeArgsList:
+				opcodeArgs += arg + ", "
+			opcodeArgs = opcodeArgs[ : -1]
+			print hexOpcode + " : " + opcodeInstruction + " " + opcodeArgs
 			opcode = f.read(2)
 
 
@@ -30,6 +37,10 @@ def maskOpcode(opcode):
 def lookupOpcode(opcode):
 	opcode = maskOpcode(opcode)
 	return opcodeTable.get(opcode, "???");
+
+def findOpcodeArgs(opcode):
+	maskedOpcode = maskOpcode(opcode)
+	return opcodeArgsTable.get(maskedOpcode)(opcode)
 
 
 if __name__ == '__main__':
